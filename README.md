@@ -11,7 +11,7 @@ Absolute value (|x|) and floor value (⌊x⌋) operators for professional use.
 
 This calculator provides a user-friendly interface as follows, allowing you to input and edit mathematical expressions within a single input field. The results of your calculations are displayed in a clear and organized manner.
 
-<img src="calculator_image.png" width="400" height="300">
+<img src="calculator_image.png">
 
 
 
