@@ -1,6 +1,6 @@
 # Calculator
 
-This professional calculator is a versatile JavaScript application designed to perform a wide range of mathematical calculations. To use this calculator, simply execute the 'calculator.html' file in your browser, and you'll have access to the following features:
+This professional calculator is a versatile JavaScript and html application designed to perform a wide range of mathematical calculations. To use this calculator, simply execute the 'calculator.html' file in your browser, and you'll have access to the following features:
 
 Basic arithmetic operations: Addition (+), subtraction (-), multiplication (*), and division (/).
 Trigonometric functions: Sine (sin), Arcsine (arcsin), Cosine (cos), and Arccosine (arccos).
