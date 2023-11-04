@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Professional Calculator</title>
+    <style>
+      input[type="text"] {
+        width: 100%;
+      }
+      .calculator-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2em;
+      }
+      .output {
+        margin-top: 10px;
+        font-size: 1.5em;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Professional Calculator</h1>
+    <input type="text" id="display" class="editable-input" />
+    <div class="calculator-grid">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendCharacter('(')">(</button>
+      <button onclick="appendCharacter(')')">)</button>
+      <button onclick="appendCharacter('/')">/</button>
+      <button onclick="appendCharacter('7')">7</button>
+      <button onclick="appendCharacter('8')">8</button>
+      <button onclick="appendCharacter('9')">9</button>
+      <button onclick="appendCharacter('*')">*</button>
+      <button onclick="appendCharacter('4')">4</button>
+      <button onclick="appendCharacter('5')">5</button>
+      <button onclick="appendCharacter('6')">6</button>
+      <button onclick="appendCharacter('-')">-</button>
+      <button onclick="appendCharacter('1')">1</button>
+      <button onclick="appendCharacter('2')">2</button>
+      <button onclick="appendCharacter('3')">3</button>
+      <button onclick="appendCharacter('+')">+</button>
+      <button onclick="appendCharacter('0')">0</button>
+      <button onclick="appendCharacter('.')">.</button>
+      <button onclick="calculateResult()">=</button>
+    </div>
+    <div class="calculator-grid">
+      <div class="row">
+        <button onclick="appendCharacter('Math.sin(')">sin</button>
+        <button onclick="appendCharacter('Math.asin(')">arcsin</button>
+        <button onclick="appendCharacter('Math.cos(')">cos</button>
+        <button onclick="appendCharacter('Math.acos(')">arccos</button>
+      </div>
+      <div class="row">
+        <button onclick="appendCharacter('Math.tan(')">tan</button>
+        <button onclick="appendCharacter('Math.atan(')">arctan</button>
+        <button onclick="appendCharacter('1/Math.tan(')">cot</button>
+        <button onclick="appendCharacter('Math.log(')">log</button>
+      </div>
+      <div class="row">
+        <button onclick="appendCharacter('Math.sqrt(')">√</button>
+        <button onclick="appendCharacter('Math.pow(')">^</button>
+        <button onclick="appendCharacter('Math.log(')">ln</button>
+        <button onclick="appendCharacter('factorial(')">!</button>
+      </div>
+      <div class="row">
+        <button onclick="appendCharacter('Math.E')">e</button>
+        <button onclick="appendCharacter('Math.PI')">π</button>
+        <button onclick="appendCharacter('Math.abs(')">|x|</button>
+        <button onclick="appendCharacter('Math.floor(')">⌊x⌋</button>
+      </div>
+    </div>
+    <div class="output">
+      <p id="result"></p>
+    </div>
+    <script>
+      function clearDisplay() {
+        document.getElementById('display').value = '';
+        document.getElementById('result').textContent = '';
+      }
+
+      function appendCharacter(character) {
+        document.getElementById('display').value += character;
+      }
+
+      function calculateResult() {
+        const expression = document.getElementById('display').value;
+        try {
+          const result = eval(expression);
+          document.getElementById('result').textContent = `Result: ${result}`;
+        } catch (error) {
+          document.getElementById('result').textContent = 'Error';
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
