@@ -1,3 +1,5 @@
+https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
 # Calculator
 
 This professional calculator is a versatile JavaScript and html application designed to perform a wide range of mathematical calculations. To use this calculator, simply execute the 'calculator.html' file in your browser, and you'll have access to the following features:
